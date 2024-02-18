@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +7,880 @@
     <!-- Daisy CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- GooGle Font CDN  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Custom StyleSheet  -->
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    
+    <header class="w-[95%] lg:w-[85%] mx-auto">
+        <!-- Nav Area  -->
+        <nav class="mt-9">
+            <div class="navbar bg-base-100">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <img class="w-7" src="./resources/menu.png" alt="">
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content font-semibold mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Destination</a></li>
+                <li><a>Search</a></li>
+                </ul>
+              </div>
+              <a class="text-xl font-bold cursor-pointer">P-Ticket</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu font-semibold menu-horizontal px-1">
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Destination</a></li>
+                <li><a>Search</a></li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+              <button class=" flex items-center gap-2 text-xl text-[#1DD100] font-extrabold bg-[#E8FAE5] px-5 rounded-xl py-1" style="border: 1px solid #1DD100;">Bus <img class="w-9 lg:w-12" src="./resources/bus-icon.png" alt=""></button>
+            </div>
+          </div>
+        </nav>
+        <!-- Banner Area  -->
+        <section class="w-full mt-7">
+            <div class="w-full rounded-2xl h-[500px] lg:h-[700px]" style="background: url('./resources/banner.png') center no-repeat; background-size: cover;">
+                <div class="flex flex-col h-full items-center justify-center text-center space-y-4 py-7">
+                    <h1 class="font-extrabold text-6xl text-[#ffffff]">
+                        End-to-End Travel with <br> <span class="text-[#1DD100]">P Paribahan</span>
+                    </h1>
+                    <p class="font-semibold text-[#fff] opacity-80">
+                        Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .
+                    </p>
+                    <a href="#buyTicket" class="py-4 px-7 bg-[#1DD100] text-xl font-extrabold rounded-xl">Buy Tickets</a>
+                </div>
+            </div>
+            <!-- Record Breaks -->
+            <div class="hidden lg:flex items-center justify-evenly -translate-y-14">
+                <div class="flex items-center space-y-3 gap-2 py-7 px-11 rounded-2xl bg-[#fff]" style="border-bottom: 3px solid rgb(29, 209, 0);">
+                    <img src="./resources/people.png" alt="">
+                    <div>
+                        <h1 class="text-4xl font-bold">500K+</h1>
+                        <p class="opacity-80 font-bold">Registered users</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-y-3 gap-2 py-7 px-11 rounded-2xl bg-[#fff]" style="border-bottom: 3px solid rgb(29, 209, 0);">
+                    <img src="./resources/ticket-cupon.png" alt="">
+                    <div>
+                        <h1 class="text-4xl font-bold">1.7 lacks</h1>
+                        <p class="opacity-80 font-bold">Tickets sold</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-y-3 gap-2 py-7 px-11 rounded-2xl bg-[#fff]" style="border-bottom: 3px solid rgb(29, 209, 0);">
+                    <img src="./resources/stoppage.png" alt="">
+                    <div>
+                        <h1 class="text-4xl font-bold">80K+</h1>
+                        <p class="opacity-80 font-bold">Rental partners</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Cuppon Area  -->
+        <section class="mt-7 lg:mt-2">
+            <h1 class="text-center text-5xl font-semibold">Best offers for you</h1>
+            <div class="mt-14 flex flex-col-reverse lg:flex-row gap-7 lg:gap-0 justify-between">
+                <!-- 15% OFF Cuppon -->
+                <div class="bg-[#FFBF0F] w-[95%] mx-auto lg:mx0 lg:w-[46%] py-7 px-3 flex flex-row-reverse lg:flex-row items-center justify-around rounded-lg">
+                <div class="space-y-3">
+                    <h1 class="text-5xl font-extrabold">
+                        15% OFF
+                    </h1>     
+                    <h3 class="text-3xl font-bold">on your next purchase</h3>
+                    <p class="opacity-80 font-semibold">use by January 2024</p>
+                </div>
+                <!-- Dotted HX Line -->
+                <div class="flex flex-col gap-1 relative">
+                    <div class="rounded-full absolute -top-14 -right-7" style="background-color: #fff; width: 50px; height: 50px;"></div> 
+                    <div class="rounded-lg" style="background-color: #fff; width: 2px; height: 7px;"></div> 
+                    <div class="rounded-lg" style="background-color: #fff; width: 2px; height: 7px;"></div> 
+                    <div class="rounded-lg" style="background-color: #fff; width: 2px; height: 7px;"></div> 
+                    <div class="rounded-lg" style="background-color: #fff; width: 2px; height: 7px;"></div> 
+                    <div class="rounded-lg" style="background-color: #fff; width: 2px; height: 7px;"></div> 
+                    <div class="rounded-lg" style="background-color: #fff; width: 2px; height: 7px;"></div> 
+                    <div class="rounded-lg" style="background-color: #fff; width: 2px; height: 7px;"></div> 
+                    <div class="rounded-lg" style="background-color: #fff; width: 2px; height: 7px;"></div> 
+                    <div class="rounded-lg" style="background-color: #fff; width: 2px; height: 7px;"></div> 
+                    <div class="rounded-lg" style="background-color: #fff; width: 2px; height: 7px;"></div> 
+                    <div class="rounded-lg" style="background-color: #fff; width: 2px; height: 7px;"></div> 
+                    <div class="rounded-lg" style="background-color: #fff; width: 2px; height: 7px;"></div> 
+                    <div class="rounded-lg" style="background-color: #fff; width: 2px; height: 7px;"></div>  
+                    <div class="rounded-full absolute -bottom-14 -right-7" style="background-color: #fff; width: 50px; height: 50px;"></div> 
+                </div>
+                <div>
+                    <h1 class="font-bold">
+                        NEW15
+                    </h1>
+                    <p class="font-semibold opacity-80">Coupon Code</p>
+                </div>
+                </div>
+                <!-- 20% OFF Cuppon -->
+                <div class="bg-[#F78C9C] w-[95%] mx-auto lg:mx0 lg:w-[46%] py-7 px-3 flex items-center justify-around rounded-lg">
+                <div class="space-y-3">
+                    <h1 class="text-5xl font-extrabold">
+                        20% OFF
+                    </h1>     
+                    <h3 class="text-3xl font-bold">
+                        on your next purchase
+                    </h3>
+                    <p class="opacity-80 font-semibold">use by January 2024</p>
+                </div>
+                <!-- Dotted HX Line -->
+                <div class="flex flex-col gap-1 relative">
+                    <div class="rounded-full absolute -top-14 -right-7" style="background-color: #fff; width: 50px; height: 50px;"></div> 
+                    <div class="rounded-lg" style="background-color: #fff; width: 2px; height: 7px;"></div> 
+                    <div class="rounded-lg" style="background-color: #fff; width: 2px; height: 7px;"></div> 
+                    <div class="rounded-lg" style="background-color: #fff; width: 2px; height: 7px;"></div> 
+                    <div class="rounded-lg" style="background-color: #fff; width: 2px; height: 7px;"></div> 
+                    <div class="rounded-lg" style="background-color: #fff; width: 2px; height: 7px;"></div> 
+                    <div class="rounded-lg" style="background-color: #fff; width: 2px; height: 7px;"></div> 
+                    <div class="rounded-lg" style="background-color: #fff; width: 2px; height: 7px;"></div> 
+                    <div class="rounded-lg" style="background-color: #fff; width: 2px; height: 7px;"></div> 
+                    <div class="rounded-lg" style="background-color: #fff; width: 2px; height: 7px;"></div> 
+                    <div class="rounded-lg" style="background-color: #fff; width: 2px; height: 7px;"></div> 
+                    <div class="rounded-lg" style="background-color: #fff; width: 2px; height: 7px;"></div> 
+                    <div class="rounded-lg" style="background-color: #fff; width: 2px; height: 7px;"></div> 
+                    <div class="rounded-lg" style="background-color: #fff; width: 2px; height: 7px;"></div>  
+                    <div class="rounded-full absolute -bottom-14 -right-7" style="background-color: #fff; width: 50px; height: 50px;"></div> 
+                </div>
+                <div>
+                    <h1 class="font-bold">
+                        Couple 20
+                    </h1>
+                    <p class="font-semibold opacity-80">Coupon Code</p>
+                </div>
+                </div>
+            </div>
+            <h1 class="mt-9 font-semibold cursor-pointer text-2xl w-1/2 lg:w-1/6 mx-auto rounded-lg text-center py-4 px-7" style="border: 1px solid #1DD100;">See All Offers</h1>
+        </section>
+    </header>
+    <main class="bg-[#F7F8F8] mt-16" style="border-radius: 50px 50px 0px 0px / 50px 50px 1px 0px;">
+        <!-- Tour Details  -->
+        <section class="py-7">
+            <h1 class="text-center text-3xl lg:text-5xl font-semibold">Best offers for you</h1>
+            <p class="text-center text-base mt-3 font-semibold opacity-80">Yes, you can run unit tests and view the results directly within the app. The integrated <br> testing features allow for a streamlined .</p>
+            <div class="w-[95%] lg:w-[85%] mx-auto bg-[#fff] py-4 lg:py-0 px-5 rounded-2xl mt-5 flex flex-col lg:flex-row justify-between gap-3 lg:gap-20 items-center">
+                <!-- Bus & Time details -->
+                <div class="space-y-4 w-full">
+                    <div class="flex justify-between">
+                        <!-- Bus Name & Seats  -->
+                        <div class="flex items-center gap-3">
+                            <img class="w-12 lg:w-24" src="./resources/bus-logo.png" alt="">
+                            <div>
+                                <h1 class="font-bold text-sm lg:text-2xl">Greenline Paribahan</h1>
+                                <p class="font-semibold text-xs lg:text-xl opacity-80">Coach-009-WEB ! AC_Business</p>
+                            </div>
+                        </div>
+                        <button class="flex items-center justify-between font-bold text-sm lg:text-xl gap-1 py-3 px-5 bg-[#DDF8D9] rounded-lg"><img class="w-6 lg:w-10" src="./resources/seat-green.png" alt=""><span id="seatLeft">40</span><span class="text-xs flex lg:text-xl">Seats left</span></button>
+                    </div>
+                    <div class="bg-[#F7F8F8] py-3 px-5 space-y-4 rounded-xl">
+                        <!-- Route  -->
+                        <div class="flex justify-between">
+                            <h3 class="font-semibold opacity-75">Route</h3>
+                            <h3 class="font-semibold text-xl">Dhaka - Sylhet</h3>
+                        </div>
+                        <!-- Divider  -->
+                        <div class="hidden lg:flex gap-1 mt-4">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                        </div>
+                        <hr class="flex lg:hidden">
+                        <!-- Departure Time  -->
+                        <div class="flex justify-between">
+                            <h3 class="font-semibold opacity-75">Departure Time</h3>
+                            <h3 class="font-semibold text-xl">9:00 PM</h3>
+                        </div>
+                         <!-- Divider  -->
+                         <div class="hidden lg:flex gap-1 mt-4">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                            <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                        </div>
+                        <hr class="flex lg:hidden">
+                        <!-- Boarding Details  -->
+                        <div class="flex gap-3 lg:gap-0 justify-between">
+                            <button class="py-2 lg:py-4 px-1 lg:px-6 bg-[#EAEBEC] rounded-lg font-bold text-xs lg:text-xl opacity-80">Boarding Point - Laxmipur</button>
+                            <button class="py-2 lg:py-4 px-1 lg:px-6 bg-[#EAEBEC] rounded-lg font-bold text-xs lg:text-xl opacity-80">Dropping Point - Bogura</button>
+                            <button class="py-2 lg:py-4 px-1 lg:px-6 bg-[#EAEBEC] rounded-lg font-bold text-xs lg:text-xl opacity-80">Est. Time - 11 Hour</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dotted HX Line -->
+                <div class="" >
+                    <img class="hidden lg:flex" src="./resources/info-devider.png" alt="">
+                </div>
+                <!-- Divider  -->
+                <hr class="flex w-full lg:hidden mt-4" style="border: 1px solid #1DD100;">
+                <!-- Seat Price  -->
+                <div class="text-center flex flex-col items-center justify-center px-5 py-7">
+                    <img class="w-10/12" src="./resources/fare.png" alt="">
+                    <h1 class="text-3xl font-bold flex gap-4">
+                        <span class="italic">550</span>
+                        Taka
+                    </h1>
+                    <p class="font-semibold text-xl opacity-80">
+                        Per Seat
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Seat Select And Buying Area  -->
+        <section id="buyTicket" class="mt-7 bg-[#fff] w-[95%] lg:w-[85%] mx-auto py-9 px-4 lg:px-11 rounded-xl flex flex-col lg:flex-row gap-5 lg:gap-9">
+            <!-- Left Area  -->
+            <div class="w-[95%] lg:w-[59%] px-2 lg:px-3">
+                <h1 class="text-3xl font-bold">Select Your Seat</h1>
+                <!-- Dotted HX Line -->
+                <div class="flex gap-1 mt-4">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                </div>
+                <div class="flex justify-between mt-4">
+                    <p class="flex items-center gap-1 opacity-75 font-bold"><img src="./resources/seat-gray.png" alt="">Available</p>
+                    <p class="flex items-center gap-1 font-bold text-[#1DD100]"><img src="./resources/seat-green-filled.png" alt="">Selected</p>
+                </div>
+                <!-- Dotted HX Line -->
+                <div class="flex gap-1 mt-4">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                </div>
+                <!-- Drivers Seat  -->
+                <div class="py-3 px-5 w-32 flex items-center justify-center rounded-xl bg-[#E5E6E7] mt-5 ml-auto -mr-3">
+                    <img class="w-11" src="./resources/wheel.png" alt="">
+                </div>
+                <!-- Seats  -->
+                <div class="mt-7 grid grid-cols-[5%_45%_45%] lg:grid-cols-[18%_37%_37%] gap-5 lg:gap-9 justify-between">
+                    <!-- Seats Row  -->
+                    <div class="space-y-4 text-xl font-bold opacity-85">
+                        <h1 class="px-2 lg:px-5 py-3">A</h1>
+                        <h1 class="px-2 lg:px-5 py-3">B</h1>
+                        <h1 class="px-2 lg:px-5 py-3">C</h1>
+                        <h1 class="px-2 lg:px-5 py-3">D</h1>
+                        <h1 class="px-2 lg:px-5 py-3">E</h1>
+                        <h1 class="px-2 lg:px-5 py-3">F</h1>
+                        <h1 class="px-2 lg:px-5 py-3">G</h1>
+                        <h1 class="px-2 lg:px-5 py-3">H</h1>
+                        <h1 class="px-2 lg:px-5 py-3">I</h1>
+                        <h1 class="px-2 lg:px-5 py-3">J</h1>
+                    </div>
+                     <!-- Seats  Left -->
+                     <div class="space-y-4 text-xl font-bold opacity-65">
+                        <div class="flex justify-between">
+                            <button id="seat" class="px-3 lg:px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">A1</button>
+                            <button id="seat" class="px-3 lg:px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">A2</button>
+                        </div>
+                        <div class="flex justify-between">
+                            <button id="seat" class="px-3 lg:px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">B1</button>
+                            <button id="seat" class="px-3 lg:px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">B2</button>
+                        </div>
+                        <div class="flex justify-between">
+                            <button id="seat" class="px-3 lg:px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">C1</button>
+                            <button id="seat" class="px-3 lg:px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">C2</button>
+                        </div>
+                        <div class="flex justify-between">
+                            <button id="seat" class="px-3 lg:px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">D1</button>
+                            <button id="seat" class="px-3 lg:px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">D2</button>
+                        </div>
+                        <div class="flex justify-between">
+                            <button id="seat" class="px-3 lg:px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">E1</button>
+                            <button id="seat" class="px-3 lg:px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">E2</button>
+                        </div>
+                        <div class="flex justify-between">
+                            <button id="seat" class="px-3 lg:px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">F1</button>
+                            <button id="seat" class="px-3 lg:px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">F2</button>
+                        </div>
+                        <div class="flex justify-between">
+                            <button id="seat" class="px-3 lg:px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">G1</button>
+                            <button id="seat" class="px-3 lg:px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">G2</button>
+                        </div>
+                        <div class="flex justify-between">
+                            <button id="seat" class="px-3 lg:px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">H1</button>
+                            <button id="seat" class="px-3 lg:px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">H2</button>
+                        </div>
+                        <div class="flex justify-between">
+                            <button id="seat" class="px-3 lg:px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">I1</button>
+                            <button id="seat" class="px-3 lg:px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">I2</button>
+                        </div>
+                        <div class="flex justify-between">
+                            <button id="seat" class="px-3 lg:px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">J1</button>
+                            <button id="seat" class="px-3 lg:px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">J2</button>
+                        </div>
+                    </div>
+                    <!-- Seats  Right -->
+                    <div class="space-y-4 text-xl font-bold opacity-65">
+                        <div class="flex justify-between">
+                            <button id="seat" class="px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">A3</button>
+                            <button id="seat" class="px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">A4</button>
+                        </div>
+                        <div class="flex justify-between">
+                            <button id="seat" class="px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">B3</button>
+                            <button id="seat" class="px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">B4</button>
+                        </div>
+                        <div class="flex justify-between">
+                            <button id="seat" class="px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">C3</button>
+                            <button id="seat" class="px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">C4</button>
+                        </div>
+                        <div class="flex justify-between">
+                            <button id="seat" class="px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">D3</button>
+                            <button id="seat" class="px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">D4</button>
+                        </div>
+                        <div class="flex justify-between">
+                            <button id="seat" class="px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">E3</button>
+                            <button id="seat" class="px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">E4</button>
+                        </div>
+                        <div class="flex justify-between">
+                            <button id="seat" class="px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">F3</button>
+                            <button id="seat" class="px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">F4</button>
+                        </div>
+                        <div class="flex justify-between">
+                            <button id="seat" class="px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">G3</button>
+                            <button id="seat" class="px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">G4</button>
+                        </div>
+                        <div class="flex justify-between">
+                            <button id="seat" class="px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">H3</button>
+                            <button id="seat" class="px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">H4</button>
+                        </div>
+                        <div class="flex justify-between">
+                            <button id="seat" class="px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">I3</button>
+                            <button id="seat" class="px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">I4</button>
+                        </div>
+                        <div class="flex justify-between">
+                            <button id="seat" class="px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">J3</button>
+                            <button id="seat" class="px-7 rounded-md w-16 lg:w-32 py-3 bg-[#F7F8F8]">J4</button>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            <!-- Divider HX Line -->
+            <div class="hidden lg:flex flex-col gap-1 mt-5">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+                <hr class="bg-[#CDCDD0] border-none w-[1.5px] rounded-2xl opacity-70 h-2">
+            </div>
+            <!-- Right Area  -->
+            <div class="w-full lg:w-[40%] px-2 lg:px-7">
+                <h1 class="text-3xl font-bold">Make Payment</h1>
+                <!-- Dotted HX Line -->
+                <div class="flex gap-1 mt-4">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+                    <hr class="bg-[#CDCDD0] border-none w-2 rounded-2xl opacity-70 h-[1.5px]">
+
+                </div>
+                <div class="mt-7 space-y-4">
+                    <!-- Price Area  -->
+                    <div class="bg-[#F7F8F8] rounded-lg space-x-2 space-y-3 py-4 px-3 lg:px-7 mt-5">
+                        <div class="flex w-full justify-between text-xl font-bold">
+                            <h4>Seat <span id="seatSelected" class="text-[#fff] text-lg rounded-md bg-[#1DD100]  px-2">0</span></h4>
+                            <h4>Class</h4>
+                            <h4>Price</h4>
+                        </div>
+                        <hr style="border: 1px solid #E5E6E7;">
+                        <div id="seatDetails" class="font-semibold ">
+                        </div>
+                        <hr style="border: 1px solid #E5E6E7;">
+                        <div class="flex justify-between font-bold text-xl">
+                            <h1>Total</h1>
+                            <h1>Price <span id="totalPrice">0</span></h1>
+                        </div>
+                        <hr style="border: none; border-bottom: 2px solid #E5E6E7;">
+                        <!-- ApplyCuppon Area  -->
+                        <div class=" flex items-center justify-between bg-white w-full py-2 px-4 rounded-xl">
+                            <input id="cupponInput" class="py-3 w-3/5 px-2 lg:px-5 text-xs lg:text-xl outline-none font-medium rounded-lg" placeholder="Have any copupon?" type="text">
+                            <button id="applyCuppon" class="py-3 w-2/5 text-sm lg:text-xl px-5 rounded-lg bg-[#1DD100] text-white font-semibold">Apply</button>
+                        </div>
+                        <!-- Grand Toatal -->
+                        <div class="flex justify-between text-xl font-bold">
+                            <h1>Grand Total</h1>
+                            <h1>BDT <span id="grandTotal">1100</span></h1>
+                        </div>
+                    </div>
+                    <!-- Passenger Info -->
+                    <div class="mt-7 space-y-4">
+                        <h1 class="font-bold text-xl lg:text-2xl">Passenger Name*</h1>
+                        <input type="text" placeholder="Type here" class="input py-9 text-base lg:text-xl font-semibold input-bordered w-full" />
+                        <h1 class="font-bold text-xl lg:text-2xl">Phone Number*</h1>
+                        <input type="text" placeholder="Type here" class="input py-9 text-base lg:text-xl font-semibold input-bordered w-full" />
+                        <h1 class="font-bold text-xl lg:text-2xl">Email ID</h1>
+                        <input type="text" placeholder="Type here" class="input py-9 text-base lg:text-xl font-semibold input-bordered w-full" />
+                        <button class="w-full py-3 px-5 bg-[#1DD100] text-white rounded-xl text-3xl font-extrabold"> Next</button>
+                        <div class="flex justify-around underline font-semibold  ">
+                            <h5 class="opacity-75 text-sm lg:text-xl cursor-pointer">Terms and Conditions</h5>
+                            <h5 class="opacity-75 text-sm lg:text-xl cursor-pointer">Cancellation Policy</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-black">
+        <div class="w-[85%] pt-7 mx-auto space-y-3 pb-16">
+            <div class=" flex justify-between">
+                <div>
+                    <h1 class="text-white font-bold text-2xl lg:text-4xl">P-Ticket</h1>
+                    <p class="text-white text-sm lg:text-lg opacity-80 font-semibold">P-Ticket is a digital platform to make your <br> daily commuting better.</p>
+                </div>
+                <div>
+                    <h2 class="font-extrabold text-sm lg:text-xl text-white ml-4">Download our app</h2>
+                    <img class="w-56" src="./resources/playstore (2).png" alt="">
+                </div>
+            </div>
+            <img class="w-full" src="./resources/Line 1.png" alt="">
+            <div class="flex flex-col items-center lg:flex-row gap-3 lg:gap-0 justify-between">
+                <p class="font-semibold text-xs lg:text-lg opacity-80 text-white">@all rights reserved, P-Ticket services limited.2024</p>
+                <div class="flex gap-4 font-normal text-center lg:text-left lg:font-semibold text-xs lg:text-xl text-white ">
+                    <p>
+                        Terms & condition
+                    </p>
+                    <p>
+                        Return & refund policy
+                    </p>
+                    <p>
+                        Privacy policy
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Custom Script  -->
+    <script src="./script.js"></script>
+    <script src="utility.js"></script>
 </body>
 </html>
